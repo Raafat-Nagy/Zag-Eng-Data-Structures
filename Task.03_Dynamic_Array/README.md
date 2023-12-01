@@ -131,6 +131,7 @@ public class Main {
 
 ## Additional Resources
 
+- [Task Information PDF](https://github.com/Raafat-Nagy/Zag-Eng-Data-Structures/blob/main/Task.03_Dynamic_Array/Task.03_DynamicArray_Info.pdf)
 - [DynamicArray Class Source Code](https://github.com/Raafat-Nagy/Zag-Eng-Data-Structures/blob/main/Task.03_Dynamic_Array/DynamicArray/src/DynamicArray.java)
 - [Main Class Source Code](https://github.com/Raafat-Nagy/Zag-Eng-Data-Structures/blob/main/Task.03_Dynamic_Array/DynamicArray/src/Main.java)
 
