@@ -18,11 +18,13 @@ public class LinkedList {
     private int size;   // Number of elements in the list
 
     // Checks if the linked list is empty
+    // Complexity: O(1)
     public boolean isEmpty() {
         return head == null;
     }
 
     // Adds a new node with the given value to the beginning of the linked list
+    // Complexity: O(1)
     public void addFirst(int value) {
         Node node = new Node(value);
 
@@ -38,6 +40,7 @@ public class LinkedList {
     }
 
     // Adds a new node with the given value to the end of the linked list
+    // Complexity: O(1)
     public void addLast(int value) {
         Node node = new Node(value);
 
@@ -53,12 +56,14 @@ public class LinkedList {
     }
 
     // Throws an exception if the linked list is empty
+    // Complexity: O(1)
     private void checkEmptyList() {
         if (isEmpty())
             throw new NoSuchElementException("Empty LinkedList");
     }
 
     // Removes the first node in the linked list
+    // Complexity: O(1)
     public void removeFirst() {
         checkEmptyList();
 
@@ -73,6 +78,7 @@ public class LinkedList {
     }
 
     // Removes the last node in the linked list
+    // Complexity: O(n), where n is the number of elements in the list
     public void removeLast() {
         checkEmptyList();
 
@@ -88,6 +94,7 @@ public class LinkedList {
     }
 
     // Private method to get the node before the last node in the linked list
+    // Complexity: O(n), where n is the number of elements in the list
     private Node getBeforeLast() {
         Node currentNode = head;
 
@@ -98,6 +105,7 @@ public class LinkedList {
     }
 
     // Finds the index of the first occurrence of the specified value in the linked list
+    // Complexity: O(n), where n is the number of elements in the list
     public int indexOf(int value) {
         int index = 0;
         Node currentNode = head;
@@ -114,16 +122,19 @@ public class LinkedList {
     }
 
     // Checks if the linked list contains the specified value
+    // Complexity: O(n), where n is the number of elements in the list
     public boolean contains(int value) {
         return indexOf(value) >= 0;
     }
 
     // Returns the size (number of elements) of the linked list
+    // Complexity: O(1)
     public int size() {
         return size;
     }
 
     // Prints the elements of the linked list in order
+    // Complexity: O(n), where n is the number of elements in the list
     public void printLinkedList() {
         Node currentNode = head;
 
@@ -136,6 +147,7 @@ public class LinkedList {
     }
 
     // Clears all elements from the linked list
+    // Complexity: O(n), where n is the number of elements in the list
     public void clear() {
         while (head != tail.next) {
             Node currentNode = head;
@@ -146,12 +158,14 @@ public class LinkedList {
     }
 
     // Checks if the given index is a valid index for accessing elements in the linked list
+    // Complexity: O(1)
     private void checkElementIndex(int index) {
         if (index < 0 || index >= size)
             throw new IndexOutOfBoundsException("Index out of range");
     }
 
     // Retrieves the node at the specified index in the linked list
+    // Complexity: O(n), where n is the number of elements in the list
     private Node getNode(int index) {
         Node currentNode = head;
         while (index-- > 0)
@@ -160,6 +174,7 @@ public class LinkedList {
     }
 
     // Sets the value of the node at the specified index to the given value
+    // Complexity: O(n), where n is the number of elements in the list
     public void set(int index, int value) {
         checkElementIndex(index);
 
@@ -168,6 +183,7 @@ public class LinkedList {
     }
 
     // Removes the node at the specified index in the linked list
+    // Complexity: O(n), where n is the number of elements in the list
     public void removeAt(int index) {
         checkElementIndex(index);
 
@@ -185,6 +201,7 @@ public class LinkedList {
     }
 
     // Removes the first occurrence of the specified value in the linked list
+    // Complexity: O(n), where n is the number of elements in the list
     public void remove(int value) {
         int index = indexOf(value);
 
@@ -195,6 +212,7 @@ public class LinkedList {
     }
 
     // Finds and returns the minimum value in the linked list
+    // Complexity: O(n), where n is the number of elements in the list
     public int min() {
         int min = head.value;
         Node currentNode = head.next;
@@ -209,6 +227,7 @@ public class LinkedList {
     }
 
     // Finds and returns the maximum value in the linked list
+    // Complexity: O(n), where n is the number of elements in the list
     public int max() {
         int max = head.value;
         Node currentNode = head.next;
