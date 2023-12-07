@@ -1,29 +1,48 @@
 # LinkedList Java Implementation
 
-A simple and versatile implementation of a singly linked list in Java. This LinkedList class provides essential functionalities for manipulating linked lists, making it easy to integrate into your Java projects.
+This repository presents a comprehensive and adaptable implementation of a singly linked list in Java. The `LinkedList` class included in this project offers fundamental functionalities for handling linked lists, making it a versatile addition to your Java projects.
 
 ## Overview
 
-This repository contains a Java implementation of a linked list data structure. It offers a flexible and efficient way to manage sequences of elements. The LinkedList class supports various operations, allowing you to customize it based on your application's needs.
+The Java implementation in this repository encapsulates a linked list data structure. It provides a versatile and efficient approach to managing sequences of elements. The `LinkedList` class supports a variety of operations, enabling customization to suit the specific requirements of your application.
 
-### LinkedList Class Source Code
+## Key Features
 
-You can find the source code for the `LinkedList` class [here](https://github.com/Raafat-Nagy/Zag-Eng-Data-Structures/blob/main/Task.04_LinkedList/LinkedList/src/LinkedList.java). Dive into the implementation to understand how the linked list is structured and how each operation is performed.
+### Node Class
 
-### Main Class Source Code
+- Represents an element in the linked list.
+- Contains an integer value (`value`) and a reference to the next node (`next`).
 
-The source code for the `Main` class, which includes example usage of the `LinkedList` class, can be found [here](https://github.com/Raafat-Nagy/Zag-Eng-Data-Structures/blob/main/Task.04_LinkedList/LinkedList/src/Main.java). This class serves as a practical guide on how to leverage the `LinkedList` implementation in your projects.
+### LinkedList Class
 
-## Features
+#### Private Attributes
 
-- **Dynamic Size:** The linked list can dynamically grow or shrink as elements are added or removed.
-- **Efficient Operations:** Add, remove, and access elements with time complexity suitable for various applications.
-- **Versatile API:** A rich set of methods to manipulate elements, including adding, removing, finding, and modifying.
-- **Clear and Concise:** The code is well-organized, making it easy to understand and integrate into your projects.
+- `head`: Points to the first node in the list.
+- `tail`: Points to the last node in the list.
+- `size`: Number of elements in the list.
+
+#### Public Methods
+
+- `isEmpty()`: Checks if the linked list is empty.
+- `addFirst(int value)`: Adds a new node with the given value to the beginning of the linked list.
+- `addLast(int value)`: Adds a new node with the given value to the end of the linked list.
+- `removeFirst()`: Removes the first node in the linked list.
+- `removeLast()`: Removes the last node in the linked list.
+- `indexOf(int value)`: Finds the index of the first occurrence of the specified value in the linked list.
+- `contains(int value)`: Checks if the linked list contains the specified value.
+- `size()`: Returns the size (number of elements) of the linked list.
+- `printLinkedList()`: Prints the elements of the linked list in order.
+- `clear()`: Clears all elements from the linked list.
+- `set(int index, int value)`: Sets the value of the node at the specified index to the given value.
+- `removeAt(int index)`: Removes the node at the specified index in the linked list.
+- `remove(int value)`: Removes the first occurrence of the specified value in the linked list.
+- `min()`: Finds and returns the minimum value in the linked list.
+- `max()`: Finds and returns the maximum value in the linked list.
+- `reverse()`: Reverses the linked list.
 
 ## Usage
 
-To use this linked list in your Java project, clone the repository, and include the `LinkedList.java` file. Adjust the package name and import it into your code.
+To integrate this linked list into your Java project, clone the repository and include the `LinkedList.java` file. Adjust the package name and import it into your code.
 
 ```java
 // Example import statement
@@ -32,22 +51,7 @@ import your.package.name.LinkedList;
 // Your code here
 ```
 
-## Methods
-
-Here are some of the key methods provided by the `LinkedList` class:
-
-- `isEmpty()`: Check if the linked list is empty.
-- `addFirst(int value)`: Add an element to the front of the linked list.
-- `addLast(int value)`: Add an element to the end of the linked list.
-- `removeFirst()`: Remove the first element in the linked list.
-- `removeLast()`: Remove the last element in the linked list.
-- `getBeforeLast()`: Get the node before the last node in the linked list.
-- `indexOf(int value)`: Find the index of the first occurrence of a value.
-- `contains(int value)`: Check if the linked list contains a specified value.
-- `size()`: Get the size (number of elements) of the linked list.
-- `printLinkedList()`: Print the elements of the linked list.
-
-## Example
+## Simple Example
 
 ```java
 // Example usage of the LinkedList class
@@ -68,7 +72,8 @@ public class Main {
 ```
 
 ## Additional Resources
+
 - [LinkedList Class Source Code](https://github.com/Raafat-Nagy/Zag-Eng-Data-Structures/blob/main/Task.04_LinkedList/LinkedList/src/LinkedList.java) 
 - [Main Class Source Code](https://github.com/Raafat-Nagy/Zag-Eng-Data-Structures/blob/main/Task.04_LinkedList/LinkedList/src/Main.java)
 
-Feel free to explore and integrate this `LinkedList` implementation into your Java projects. We welcome contributions, feedback, and bug reports.
+Feel free to explore and integrate this `LinkedList` implementation into your Java projects. We welcome contributions, feedback, and bug reports. Happy coding!
