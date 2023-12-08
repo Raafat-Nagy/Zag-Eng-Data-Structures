@@ -1,14 +1,14 @@
 import java.util.NoSuchElementException;
 
-public class LinkedList {
+public class LinkedList<T extends Comparable<T>> {
 
 	// Node class represents an element in the linked list
 	public class Node {
-		int value;
+		T value;
 		Node next;
 
 		// Constructor to initialize a node with a given value
-		Node(int value) {
+		Node(T value) {
 			this.value = value;
 		}
 	}
@@ -25,7 +25,7 @@ public class LinkedList {
 
 	// Adds a new node with the given value to the beginning of the linked list
 	// Complexity: O(1)
-	public void addFirst(int value) {
+	public void addFirst(T value) {
 		Node node = new Node(value);
 
 		if (isEmpty()) {
@@ -41,7 +41,7 @@ public class LinkedList {
 
 	// Adds a new node with the given value to the end of the linked list
 	// Complexity: O(1)
-	public void addLast(int value) {
+	public void addLast(T value) {
 		Node node = new Node(value);
 
 		if (isEmpty()) {
@@ -106,12 +106,12 @@ public class LinkedList {
 
 	// Finds the index of the first occurrence of the specified value in the linked list
 	// Complexity: O(n), where n is the number of elements in the list
-	public int indexOf(int value) {
+	public int indexOf(T value) {
 		int index = 0;
 		Node currentNode = head;
 
 		while (currentNode != null) {
-			if (currentNode.value == value)
+			if (currentNode.value.equals(value))
 				return index;
 
 			currentNode = currentNode.next;
@@ -123,7 +123,7 @@ public class LinkedList {
 
 	// Checks if the linked list contains the specified value
 	// Complexity: O(n), where n is the number of elements in the list
-	public boolean contains(int value) {
+	public boolean contains(T value) {
 		return indexOf(value) >= 0;
 	}
 
@@ -149,7 +149,7 @@ public class LinkedList {
 	// Clears all elements from the linked list
 	// Complexity: O(n), where n is the number of elements in the list
 	public void clear() {
-		while (head != tail.next) {
+		while (head != null) {
 			Node currentNode = head;
 			head = head.next;
 			currentNode.next = null;
@@ -175,7 +175,7 @@ public class LinkedList {
 
 	// Sets the value of the node at the specified index to the given value
 	// Complexity: O(n), where n is the number of elements in the list
-	public void set(int index, int value) {
+	public void set(int index, T value) {
 		checkElementIndex(index);
 
 		Node node = getNode(index);
@@ -202,7 +202,7 @@ public class LinkedList {
 
 	// Removes the first occurrence of the specified value in the linked list
 	// Complexity: O(n), where n is the number of elements in the list
-	public void remove(int value) {
+	public void remove(T value) {
 		int index = indexOf(value);
 
 		if (index == -1)
@@ -213,12 +213,15 @@ public class LinkedList {
 
 	// Finds and returns the minimum value in the linked list
 	// Complexity: O(n), where n is the number of elements in the list
-	public int min() {
-		int min = head.value;
+	public T min() {
+		if (isEmpty())
+			throw new NoSuchElementException("Empty LinkedList");
+
+		T min = head.value;
 		Node currentNode = head.next;
 
-		while (currentNode != tail.next) {
-			if (currentNode.value < min)
+		while (currentNode != null) {
+			if (currentNode.value.compareTo(min) < 0)
 				min = currentNode.value;
 
 			currentNode = currentNode.next;
@@ -228,12 +231,15 @@ public class LinkedList {
 
 	// Finds and returns the maximum value in the linked list
 	// Complexity: O(n), where n is the number of elements in the list
-	public int max() {
-		int max = head.value;
+	public T max() {
+		if (isEmpty())
+			throw new NoSuchElementException("Empty LinkedList");
+
+		T max = head.value;
 		Node currentNode = head.next;
 
-		while (currentNode != tail.next) {
-			if (currentNode.value > max)
+		while (currentNode != null) {
+			if (currentNode.value.compareTo(max) > 0)
 				max = currentNode.value;
 
 			currentNode = currentNode.next;
@@ -261,5 +267,4 @@ public class LinkedList {
 		tail = temp;
 		tail.next = null;
 	}
-
 }
