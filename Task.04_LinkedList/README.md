@@ -40,16 +40,6 @@ The Java implementation in this repository encapsulates a linked list data struc
 - `max()`: Finds and returns the maximum value in the linked list.
 - `reverse()`: Reverses the linked list.
 
-## Usage
-
-To integrate this linked list into your Java project, clone the repository and include the `LinkedList.java` file. Adjust the package name and import it into your code.
-
-```java
-// Example import statement
-import your.package.name.LinkedList;
-
-// Your code here
-```
 
 ## Simple Example
 
