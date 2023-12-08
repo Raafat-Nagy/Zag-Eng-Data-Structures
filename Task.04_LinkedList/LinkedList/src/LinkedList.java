@@ -1,14 +1,14 @@
 import java.util.NoSuchElementException;
 
-public class LinkedList<T extends Comparable<T>> {
+public class LinkedList {
 
 	// Node class represents an element in the linked list
 	public class Node {
-		T value;
+		int value;
 		Node next;
 
 		// Constructor to initialize a node with a given value
-		Node(T value) {
+		Node(int value) {
 			this.value = value;
 		}
 	}
@@ -25,7 +25,7 @@ public class LinkedList<T extends Comparable<T>> {
 
 	// Adds a new node with the given value to the beginning of the linked list
 	// Complexity: O(1)
-	public void addFirst(T value) {
+	public void addFirst(int value) {
 		Node node = new Node(value);
 
 		if (isEmpty()) {
@@ -41,7 +41,7 @@ public class LinkedList<T extends Comparable<T>> {
 
 	// Adds a new node with the given value to the end of the linked list
 	// Complexity: O(1)
-	public void addLast(T value) {
+	public void addLast(int value) {
 		Node node = new Node(value);
 
 		if (isEmpty()) {
@@ -106,12 +106,12 @@ public class LinkedList<T extends Comparable<T>> {
 
 	// Finds the index of the first occurrence of the specified value in the linked list
 	// Complexity: O(n), where n is the number of elements in the list
-	public int indexOf(T value) {
+	public int indexOf(int value) {
 		int index = 0;
 		Node currentNode = head;
 
 		while (currentNode != null) {
-			if (currentNode.value.equals(value))
+			if (currentNode.value == value)
 				return index;
 
 			currentNode = currentNode.next;
@@ -123,7 +123,7 @@ public class LinkedList<T extends Comparable<T>> {
 
 	// Checks if the linked list contains the specified value
 	// Complexity: O(n), where n is the number of elements in the list
-	public boolean contains(T value) {
+	public boolean contains(int value) {
 		return indexOf(value) >= 0;
 	}
 
@@ -175,7 +175,7 @@ public class LinkedList<T extends Comparable<T>> {
 
 	// Sets the value of the node at the specified index to the given value
 	// Complexity: O(n), where n is the number of elements in the list
-	public void set(int index, T value) {
+	public void set(int index, int value) {
 		checkElementIndex(index);
 
 		Node node = getNode(index);
@@ -202,7 +202,7 @@ public class LinkedList<T extends Comparable<T>> {
 
 	// Removes the first occurrence of the specified value in the linked list
 	// Complexity: O(n), where n is the number of elements in the list
-	public void remove(T value) {
+	public void remove(int value) {
 		int index = indexOf(value);
 
 		if (index == -1)
@@ -213,15 +213,12 @@ public class LinkedList<T extends Comparable<T>> {
 
 	// Finds and returns the minimum value in the linked list
 	// Complexity: O(n), where n is the number of elements in the list
-	public T min() {
-		if (isEmpty())
-			throw new NoSuchElementException("Empty LinkedList");
-
-		T min = head.value;
+	public int min() {
+		int min = head.value;
 		Node currentNode = head.next;
 
 		while (currentNode != null) {
-			if (currentNode.value.compareTo(min) < 0)
+			if (currentNode.value < min)
 				min = currentNode.value;
 
 			currentNode = currentNode.next;
@@ -231,15 +228,12 @@ public class LinkedList<T extends Comparable<T>> {
 
 	// Finds and returns the maximum value in the linked list
 	// Complexity: O(n), where n is the number of elements in the list
-	public T max() {
-		if (isEmpty())
-			throw new NoSuchElementException("Empty LinkedList");
-
-		T max = head.value;
+	public int max() {
+		int max = head.value;
 		Node currentNode = head.next;
 
 		while (currentNode != null) {
-			if (currentNode.value.compareTo(max) > 0)
+			if (currentNode.value > max)
 				max = currentNode.value;
 
 			currentNode = currentNode.next;
@@ -267,4 +261,5 @@ public class LinkedList<T extends Comparable<T>> {
 		tail = temp;
 		tail.next = null;
 	}
+
 }
