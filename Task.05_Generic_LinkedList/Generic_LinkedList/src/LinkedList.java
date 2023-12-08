@@ -149,7 +149,7 @@ public class LinkedList<T extends Comparable<T>> {
 	// Clears all elements from the linked list
 	// Complexity: O(n), where n is the number of elements in the list
 	public void clear() {
-		while (head != tail.next) {
+		while (head != null) {
 			Node currentNode = head;
 			head = head.next;
 			currentNode.next = null;
