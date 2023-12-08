@@ -57,8 +57,8 @@ public class Main {
 		System.out.println("Size: " + linkedList.size());
 
 		// Test min and max
-		linkedList.addLast(15);
 		linkedList.addLast(5);
+		linkedList.addLast(15);
 		linkedList.addLast(25);
 		System.out.println("\nLinked List with additional elements:");
 		linkedList.printLinkedList();
