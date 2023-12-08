@@ -40,28 +40,7 @@ The Java implementation in this repository encapsulates a linked list data struc
 - `max()`: Finds and returns the maximum value in the linked list.
 - `reverse()`: Reverses the linked list.
 
-
-## Simple Example
-
-```java
-// Example usage of the LinkedList class
-
-public class Main {
-
-    public static void main(String[] args) {
-        LinkedList linkedList = new LinkedList();
-        
-        linkedList.addFirst(2);
-        linkedList.addFirst(1);
-        linkedList.addLast(3);
-        linkedList.addLast(4);
-
-        linkedList.printLinkedList();
-    }
-}
-```
-
-## Additional Resources
+## Resources
 
 - [LinkedList Class Source Code](https://github.com/Raafat-Nagy/Zag-Eng-Data-Structures/blob/main/Task.04_LinkedList/LinkedList/src/LinkedList.java) 
 - [Main Class Source Code](https://github.com/Raafat-Nagy/Zag-Eng-Data-Structures/blob/main/Task.04_LinkedList/LinkedList/src/Main.java)
