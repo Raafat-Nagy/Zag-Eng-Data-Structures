@@ -1,6 +1,6 @@
 # Generic Stack Java Implementation
 
-This Java implementation introduces a generic stack data structure implemented with a linked list, adhering to the Last In, First Out (LIFO) principle where elements are added and removed from the top.
+This Java implementation introduces a generic stack data structure implemented with a **linked list**, adhering to the Last In, First Out (LIFO) principle where elements are added and removed from the top.
 
 ## Node Class
 
