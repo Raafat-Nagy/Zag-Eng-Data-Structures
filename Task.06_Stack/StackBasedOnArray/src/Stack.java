@@ -5,9 +5,9 @@ public class Stack<E> {
 	private static final int DEFAULT_CAPACITY = 10;
 	private static final int RESIZE_FACTOR = 2;
 
-	Object[] elements;
-	int capacity;
-	int lastElement = 0;
+	private Object[] elements;
+	private int capacity;
+	private int lastElement = 0;
 
 	public Stack() {
 		capacity = DEFAULT_CAPACITY;
