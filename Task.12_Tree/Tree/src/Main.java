@@ -24,6 +24,7 @@ public class Main {
 		tree.displayPostOrder();
 		System.out.println("\n");
 
+
 		System.out.println("Print elements in level order:");
 		tree.printInLevelOrder();
 
